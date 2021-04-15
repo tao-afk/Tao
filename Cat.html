@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+   
+    <title>Random Music Player</title>
+    <link rel="icon" type="img/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ11QmAMUEW-Cj9LwwBLa_QAokotRCbYOfOow&usqp=CAU">
+    
+</head>   
+<body>
+    <p>Click the button for a random kitten</p>
+    <img id=Cat scr=''>
+    <button id=Button>I WANT A CAT</button>
+    
+</body>
+<script>
+    async function playMusic(){
+        const response = await fetch('https://api.thecatapi.com/v1/images/search');
+        const data = await response.json();
+        document.getElementById(Cat).scr=(data)
+        console.log(data);
+    }
+</script>
